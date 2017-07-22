@@ -13,9 +13,9 @@ df = pkl_data['test_data']
 ids = pkl_data['test_ID']
 
 ############### NORMALIZATION #################
-#rs = RobustScaler()
-#rs = rs.fit(df)
-#df.iloc[:] = rs.transform(df)
+rs = RobustScaler()
+rs = rs.fit(df)
+df.iloc[:] = rs.transform(df)
 ###############################################
 
 X = np.array(df.values)
