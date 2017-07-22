@@ -12,3 +12,9 @@ def AMS_scoring(ground_truth=None, predictions=None, **kwargs):
     return AMS(s, b)
 
 
+if __name__ == "__main__":
+    g = np.array([1, 0, 0, 1])
+    p = np.array([1, 0, 1, 1])
+    w = np.array([1, 1, 1, 1])
+
+    print(AMS_scoring(g, p, w=w)) # expected answer is 0.586
